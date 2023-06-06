@@ -1,24 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Doviz_Cevirici___Api___JSON" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Döviz Kurları" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0D3-Wi-GUQ">
+                                <rect key="frame" x="103.33333333333333" y="98" width="186.33333333333337" height="40.666666666666657"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD: 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7d-ce-M4O">
+                                <rect key="frame" x="157" y="197" width="79" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRY:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIu-iU-NJD">
+                                <rect key="frame" x="170" y="293" width="53" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EUR:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7a0-7n-WKa">
+                                <rect key="frame" x="168.66666666666666" y="383" width="56" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RSD:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfF-tt-oRb">
+                                <rect key="frame" x="168.66666666666666" y="477" width="56" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6QS-CD-2ma">
+                                <rect key="frame" x="158.33333333333334" y="659" width="76.666666666666657" height="44"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Getir">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="getirButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0ws-gF-09A"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GEL:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18A-XX-UZZ">
+                                <rect key="frame" x="169.66666666666666" y="576" width="54" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6QS-CD-2ma" firstAttribute="top" secondItem="18A-XX-UZZ" secondAttribute="bottom" constant="51" id="0iW-9i-3QJ"/>
+                            <constraint firstItem="18A-XX-UZZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DW2-ij-VON"/>
+                            <constraint firstItem="7a0-7n-WKa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GOI-Y0-ksE"/>
+                            <constraint firstItem="0D3-Wi-GUQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="39" id="MtR-UR-SRx"/>
+                            <constraint firstItem="18A-XX-UZZ" firstAttribute="top" secondItem="tfF-tt-oRb" secondAttribute="bottom" constant="67" id="NpS-h6-yse"/>
+                            <constraint firstItem="tfF-tt-oRb" firstAttribute="top" secondItem="7a0-7n-WKa" secondAttribute="bottom" constant="62" id="PUB-GL-i2H"/>
+                            <constraint firstItem="LIu-iU-NJD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SyM-Qa-c9q"/>
+                            <constraint firstItem="6QS-CD-2ma" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vya-yN-Qvm"/>
+                            <constraint firstItem="LIu-iU-NJD" firstAttribute="top" secondItem="N7d-ce-M4O" secondAttribute="bottom" constant="63" id="Xz6-1k-LRH"/>
+                            <constraint firstItem="0D3-Wi-GUQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yqd-Gf-HP6"/>
+                            <constraint firstItem="tfF-tt-oRb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fu4-L6-D26"/>
+                            <constraint firstItem="N7d-ce-M4O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kGa-gt-EuM"/>
+                            <constraint firstItem="7a0-7n-WKa" firstAttribute="top" secondItem="LIu-iU-NJD" secondAttribute="bottom" constant="58" id="uHT-Md-G2y"/>
+                            <constraint firstItem="N7d-ce-M4O" firstAttribute="top" secondItem="0D3-Wi-GUQ" secondAttribute="bottom" constant="58.329999999999998" id="wg2-NS-FwX"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="eurLabel" destination="7a0-7n-WKa" id="mbC-xl-ZwB"/>
+                        <outlet property="gelLabel" destination="18A-XX-UZZ" id="9j7-d3-vUm"/>
+                        <outlet property="rsdLabel" destination="tfF-tt-oRb" id="p2s-bT-P7e"/>
+                        <outlet property="tryLabel" destination="LIu-iU-NJD" id="iDL-xB-JH5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-97" y="-414"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
